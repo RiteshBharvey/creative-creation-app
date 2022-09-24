@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  display: flex;
+  overflow-x: hidden;
+  /* background-color: chocolate; */
+}
+
+.right-side {
+  display: none;
+  background-color: #EDE6DB;
+  width: 25%;
+  height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.right-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-side {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 2rem;
+  background-color: #00FFAB;
+}
+
+.range {
+  height: 0.8rem;
+  width: 20rem;
+  /* border: 1px solid black; */
+  background-color: rgb(199, 199, 199);
+  border-radius: 8px;
+  margin-right: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.fill {
+  border-radius: 8px;
+  height: 100%;
+  width: 0;
+  background-color: #2716be;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  margin: 1rem 0;
+}
+
+.color-container,
+.color-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.range-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+  list-style: none;
+  width: fit-content;
+}
+li {
+  width: 18rem;
+  height: 10rem;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.content {
+  height: 90%;
+  width: 100%;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+ul i {
+  cursor: pointer;
+}
+
+.icon {
+  float: right;
+}
+
+.creationForm {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+form h3 {
+  margin-top: 2rem;
+  margin-bottom: 5px;
+}
+form label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#searchBar,
+#title,
+#subtitle {
+  width: 100%;
+  height: 1.5rem;
+  margin: 1rem 0;
+  padding: 14px 5px;
+  font-family: inherit;
+  font-size: 1.1rem;
+}
+
+.addCreativeBtn,
+.rightSideBtn {
+  margin: 1rem 0;
+  padding: 0.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 10rem;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.right-header i {
+  background-color: rgb(221, 221, 221);
+  border: 1px solid black;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.right-header i:hover {
+  background-color: rgba(85, 84, 84, 0.692);
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: yellow;
+  border-radius: 50%;
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.container1 {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Hide the browser's default radio button */
+.container1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: yellow;
+  border: 1px solid black;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark1:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container1 input:checked ~ .checkmark1:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container1 .checkmark1:after {
+  top: -7px;
+  left: -6.65px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: none;
+  border: 1px solid black;
+}
+
+.result {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cardEditOkBtn,
+.cardEditCancelBtn {
+  font-weight: bold;
+  cursor: pointer;
+  width: 3.5rem;
+  font-size: 1rem;
+}
+
+.editCardTitleInput,
+.editCardSubTitleInput {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.cardEditOkBtn {
+  float: right;
+}
+.cardEditCancelBtn {
+  position: relative;
+  transform: translate(8.5rem, 0rem);
+}
+
+.edit {
+  margin-right: 8px;
+}

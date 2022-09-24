@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Creative</title>
+  </head>
+  <body>
+    <div class="left-side">
+      <h2>Filter By:</h2>
+      <div class="filter-container">
+        <div>
+          <h3>Color</h3>
+          <div class="color-container"></div>
+        </div>
+        <div>
+          <h3>Title/Sub-Title</h3>
+          <input id="searchBar" placeholder="🔍 Search..." type="text" />
+        </div>
+      </div>
+      <div class="range-container">
+        <div class="range">
+          <div class="fill"></div>
+        </div>
+        <p><span id="count">0</span>/<span>20</span> Creatives</p>
+      </div>
+      <div>
+        <button class="addCreativeBtn">+ADD Creative</button>
+      </div>
+      <ul></ul>
+    </div>
+    <div class="right-side">
+      <div class="right-header">
+        <h2>Creative Creation</h2>
+        <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+      </div>
+      <form class="creationForm">
+        <label for="title">Title</label><br />
+        <input id="title" type="text" required /><br />
+        <label for="subtitle">Sub-Title</label><br />
+        <input id="subtitle" type="text" required />
+        <h3>Background Color</h3>
+
+        <div class="color-container1"></div>
+        <button class="rightSideBtn">Done</button>
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
