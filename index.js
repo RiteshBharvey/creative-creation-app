@@ -397,11 +397,7 @@ function renderList() {
 }
 
 function deleteCard(e) {
-  console.log(e.path);
-  console.log(e.path[4].childNodes);
   let index = listsArr.findIndex((list) => list.id.toString() === e.path[3].id);
-  console.log(index);
-  console.log(listsArr);
   listsArr.splice(index, 1);
   creativesCount();
   renderList();
@@ -411,9 +407,6 @@ function deleteCard(e) {
 
 function editCardForm(e) {
   e.preventDefault();
-  console.log(e.target[0].value);
-  console.log(e.target[1].value);
-  console.log(e.path);
   if (
     e.target[0].value.trim().length > 0 &&
     e.target[1].value.trim().length > 0
@@ -448,7 +441,5 @@ function cancelEditCard(e) {
 }
 
 function editCard(e) {
-  console.log(e.path);
-  console.log(e.path[3]);
   e.path[3].innerHTML = `<form onSubmit="editCardForm(event)"><input class="editCardTitleInput" type="text" placeholder="Title" required/><br><input class="editCardSubTitleInput" type="text" placeholder="Sub-Title" required/><br><button class="cardEditOkBtn">Edit</button></form><button class="cardEditCancelBtn" onClick="cancelEditCard(event)">Cancel</button>`;
 }
